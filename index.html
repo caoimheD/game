@@ -22,19 +22,22 @@
 
 <section class="the-game">
     <div>
-        <button data-choice="0" class="choicebtn" onclick="runGame(playerChoice)" onclick="compChoice()">Rock</button>
-        <button data-choice="1" class="choicebtn" onclick="runGame(playerChoice)" onclick="compChoice()">Paper</button>
-        <button data-choice="2" class="choicebtn" onclick="runGame(playerChoice)" onclick="compChoice()">Scissors</button>
+        <button id="rock" data-choice="0" class="choicebtn" onclick="runGame()">Rock</button>
+        <button id="paper" data-choice="1" class="choicebtn" onclick="runGame()">Paper</button>
+        <button id="scissors" data-choice="2" class="choicebtn" onclick="runGame()">Scissors</button>
     </div>
     <div id="messages"></div>
     <div class="user">
+            <p>Your choice: <span id = "user-choice"></span></p>
             <p class="scores">Your score: <span id = "user-score">0</span></p>
             <img id = "user-img" src="assets/images/game.jpg" alt="">
     </div>
     <div class="computer">
+            <p>Computer choice: <span id = "comp-choice"></span></p>
             <p class="scores">Comp score: <span id = "comp-score">0</span></p>
             <img id = "comp-img" src="assets/images/game.jpg" alt="">
     </div>
+    <p>Result:<span id="result"></span></p>
 
 
     <button id="reset" onclick="reset()">Reset</button>
