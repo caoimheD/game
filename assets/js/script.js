@@ -8,8 +8,8 @@ const resultText = document.getElementById("result");
 const playerScoreText = document.getElementById("user-score");
 const compScoreText = document.getElementById("comp-score");
 
-let playerScore;
-let computerScore;
+let playerScore = 0;
+let computerScore = 0;
 let reset = document.getElementById("reset");
 let playerChoice;
 let computerChoice;
@@ -106,8 +106,6 @@ resultText.innerHTML = result;
  */
 
 function checkScore(){
-playerScore = 0;
-computerScore = 0;
 
     if (score == 'player') {
       playerScore++;
