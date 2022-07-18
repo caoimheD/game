@@ -5,13 +5,16 @@
 const compChoiceText = document.getElementById("comp-choice");
 const userChoiceText = document.getElementById("user-choice");
 const resultText = document.getElementById("result");
+const playerScoreText = document.getElementById("user-score");
+const compScoreText = document.getElementById("comp-score");
 
-let playerScore = document.getElementById("user-score");
-let computerScore = document.getElementById("comp-score");
+let playerScore;
+let computerScore;
 let reset = document.getElementById("reset");
 let playerChoice;
 let computerChoice;
 let result;
+let score;
 /**
  * add event listener to buttons and display user/computer choices in text
  *  
@@ -23,6 +26,7 @@ for (let i = 0; i < button.length; i++) {
   userChoiceText.innerHTML = playerChoice;
   compChoice();
   checkWinner();
+  checkScore();
  }
  )};
 
@@ -67,24 +71,31 @@ function compChoice () {
 function checkWinner () {
     if (playerChoice == computerChoice) {
       result = 'its a draw!';
+      score = 'playerAndcomputer'
 }
 if (computerChoice === 'rock' && playerChoice === 'paper') {
   result = 'you won!';
+  score = 'player';
 }
 if (computerChoice === 'rock' && playerChoice === 'scissors') {
   result = 'you lost!';
+  score = 'computer';
 }
 if (computerChoice === 'paper' && playerChoice === 'scissors') {
   result = 'you won!';
+  score = 'player';
 }
 if (computerChoice === 'paper' && playerChoice === 'rock') {
   result = 'you lost!';
+  score = 'computer';
 }
 if (computerChoice === 'scissors' && playerChoice === 'rock') {
   result = 'you won!';
+  score = 'player';
 }
 if (computerChoice === 'scissors' && playerChoice === 'paper') {
   result = 'you lost!';
+  score = 'computer';
 }
 resultText.innerHTML = result;
 
@@ -94,7 +105,22 @@ resultText.innerHTML = result;
  * Scores
  */
 
+function checkScore(){
+playerScore = 0;
+computerScore = 0;
 
+    if (score == 'player') {
+      playerScore++;
+    } else if (score == 'computer') {
+      computerScore++;
+    }
+    else if (score == 'playerAndcomputer') {
+      computerScore++;
+      playerScore++;
+    }
+    playerScoreText.innerHTML = playerScore;
+    compScoreText.innerHTML = computerScore;
+  }
 /**
  * Reset game
  */
