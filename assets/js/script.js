@@ -8,25 +8,39 @@
  let reset = document.getElementById("reset");
 
 /**
- * Add event listener to buttons
+ * function that runs the game
  *  
  */
-
-let button = document.getElementsByClassName('choicebtn');
-for (let i = 0; i < button.length; i++) {
- button[i].addEventListener("click", function (){
-    let playerChoice = this.getAttribute("data-choice");
-    runGame(playerChoice);
-});
-}
- 
 function runGame(playerChoice) {
-    let choices = ["rock", "paper", "scissors"];
+ 
+    let button = document.getElementsByClassName('choicebtn');
+    for (let i = 0; i < button.length; i++) {
+    let playerChoice = this.getAttribute("data-choice");
+
+  }
+}
+/**
+ * function that determines computer choice
+ *  
+ */
+function compChoice () {
 
     let computerChoice = Math.floor(Math.random() * 3);
-    let result = checkWinner(choices[computerChoice], choices[playerChoice]);
 
+    switch(computerChoice) {
+      case 0:
+          choice = "rock";
+          break;
+      case 1:
+          choice = "paper";
+          break;
+      case 2:
+          choice = "scissors";
+          break; 
+  }
+  return choice;
 }
+
 
 function checkWinner () {
     if (playerChoice == computerChoice) {
