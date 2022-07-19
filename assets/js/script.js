@@ -32,9 +32,7 @@ for (let i = 0; i < button.length; i++) {
 
 /**
  * function that runs the game
- *  
- */
-function runGame(e) {
+ * function runGame(e) {
  
    playerChoice = e.target.id;
    userChoiceText.innerHTML = playerChoice;
@@ -42,6 +40,9 @@ function runGame(e) {
     checkWinner();
 
   }
+ *  
+ */
+
 
 /**
  * function that determines computer choice
@@ -72,28 +73,22 @@ function checkWinner () {
     if (playerChoice == computerChoice) {
       result = 'its a draw!';
       score = 'playerAndcomputer'
-}
-if (computerChoice === 'rock' && playerChoice === 'paper') {
+} else if (computerChoice === 'rock' && playerChoice === 'paper') {
   result = 'you won!';
   score = 'player';
-}
-if (computerChoice === 'rock' && playerChoice === 'scissors') {
+} else if (computerChoice === 'rock' && playerChoice === 'scissors') {
   result = 'you lost!';
   score = 'computer';
-}
-if (computerChoice === 'paper' && playerChoice === 'scissors') {
+} else if (computerChoice === 'paper' && playerChoice === 'scissors') {
   result = 'you won!';
   score = 'player';
-}
-if (computerChoice === 'paper' && playerChoice === 'rock') {
+} else if (computerChoice === 'paper' && playerChoice === 'rock') {
   result = 'you lost!';
   score = 'computer';
-}
-if (computerChoice === 'scissors' && playerChoice === 'rock') {
+} else if (computerChoice === 'scissors' && playerChoice === 'rock') {
   result = 'you won!';
   score = 'player';
-}
-if (computerChoice === 'scissors' && playerChoice === 'paper') {
+} else if (computerChoice === 'scissors' && playerChoice === 'paper') {
   result = 'you lost!';
   score = 'computer';
 }
@@ -122,3 +117,12 @@ function checkScore(){
 /**
  * Reset game
  */
+
+function gameReset() {
+      computerScore = 0;
+      playerScore = 0;
+
+      playerScoreText.innerHTML = playerScore;
+      compScoreText.innerHTML = computerScore;
+
+}
