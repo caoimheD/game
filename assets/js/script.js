@@ -27,6 +27,7 @@ for (let i = 0; i < button.length; i++) {
   compChoice();
   checkWinner();
   checkScore();
+  gameRound();
  }
  )};
 
@@ -124,5 +125,24 @@ function gameReset() {
 
       playerScoreText.innerHTML = playerScore;
       compScoreText.innerHTML = computerScore;
+
+}
+/**
+ * Limits the amount of rounds played per game to 5 and then announces a winner of the game
+ */
+
+
+function gameRound() {
+
+  if (playerScore === 5) {
+    alert('You win the game!');
+    gameReset();
+
+
+  } else if (computerScore === 5 ) {
+    alert('You lost the game!');
+    gameReset();
+
+  }
 
 }
