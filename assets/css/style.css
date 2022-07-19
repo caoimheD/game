@@ -25,6 +25,7 @@ footer {
     margin-right: auto;
     text-align: center;
     padding: 5px;
+    font-size: 150%;
 }
 
 .choicebtn {
@@ -47,7 +48,7 @@ footer {
     padding: 3px;
 }
 
-.reset {
+#reset {
     width: 70px;
     height: 30px;
     margin: 2px;
@@ -55,7 +56,7 @@ footer {
     color: #D3CEDF;
 }
 
-.reset:hover {
+#reset:hover {
     background-color: #D3CEDF;
     color: #748DA6;
 }

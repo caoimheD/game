@@ -28,6 +28,7 @@ for (let i = 0; i < button.length; i++) {
   checkWinner();
   checkScore();
   gameRound();
+  changeImg()
  }
  )};
 
@@ -131,18 +132,26 @@ function gameReset() {
  * Limits the amount of rounds played per game to 5 and then announces a winner of the game
  */
 
-
 function gameRound() {
 
   if (playerScore === 5) {
     alert('You win the game!');
     gameReset();
-
-
   } else if (computerScore === 5 ) {
     alert('You lost the game!');
     gameReset();
-
   }
+}
 
+/**
+ * Changes the image based on user choice
+ */
+
+function changeImg() {
+  let userImg = document.getElementById("user-img");
+  let compImg = document.getElementById("comp-img");
+
+  if (playerChoice === 'rock') {
+    userImg.src="assets/images/rock.jpg";
+  }
 }

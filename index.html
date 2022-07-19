@@ -12,12 +12,12 @@
     
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Game</title>
+    <title>Play Rock, Paper, Scissors!</title>
 </head>
 
 <body>
 <header>
-    <h1>Game</h1>
+    <h1>Play Rock, Paper, Scissors!</h1>
 </header>
 
 <section class="the-game">
@@ -28,22 +28,22 @@
     </div>
     <div id="messages"></div>
     <div class="user">
-            <p>Your choice: <span id = "user-choice"></span></p>
-            <p class="scores">Your score: <span id = "user-score">0</span></p>
-            <img id = "user-img" src="assets/images/game.jpg" alt="">
+        <p>You chose: <span id = "user-choice"></span></p>
+        <p class="scores">Your score: <span id = "user-score">0</span></p>
+        <img id = "user-img" src="assets/images/game.jpg" alt="">
     </div>
     <div class="computer">
-            <p>Computer choice: <span id = "comp-choice"></span></p>
-            <p class="scores">Comp score: <span id = "comp-score"></span></p>
-            <img id = "comp-img" src="assets/images/game.jpg" alt="">
+        <p>Computer chose: <span id = "comp-choice"></span></p>
+        <p class="scores">Computer score: <span id = "comp-score">0</span></p>
+        <img id = "comp-img" src="assets/images/game.jpg" alt="">
     </div>
     <p>Result:<span id="result"></span></p>
 
-
     <button id="reset" onclick="gameReset()">Reset</button>
+    
 </section>
 
-<footer>Remember: </footer>
+<footer>Rules: Rock beats scissors, Scissors beats paper, Paper beats rock! 5 turns per game! </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
