@@ -28,7 +28,7 @@ for (let i = 0; i < button.length; i++) {
   checkWinner();
   checkScore();
   gameRound();
-  changeImg()
+  changeImg();
  }
  )};
 
@@ -60,7 +60,7 @@ function compChoice () {
    if (randomOption === 2) {
     computerChoice = 'paper'
    }
-   if (randomOption === 1) {
+   if (randomOption === 3) {
     computerChoice = 'scissors'
    }
    compChoiceText.innerHTML = computerChoice;   
@@ -153,5 +153,18 @@ function changeImg() {
 
   if (playerChoice === 'rock') {
     userImg.src="assets/images/rock.jpg";
-  }
+  } else if (playerChoice === 'scissors') {
+    userImg.src="assets/images/scissors.jpg";
+  } else if (playerChoice === 'paper') {
+    userImg.src="assets/images/paper.jpg";
+  } 
+
+  if (computerChoice === 'rock') {
+    compImg.src="assets/images/rock.jpg";
+  } else if (computerChoice === 'scissors') {
+    compImg.src="assets/images/scissors.jpg";
+  } else if (computerChoice === 'paper') {
+    compImg.src="assets/images/paper.jpg";
+  } 
+
 }
