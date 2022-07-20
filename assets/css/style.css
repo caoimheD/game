@@ -6,7 +6,10 @@ body {
 
 header {
     text-align: center;
-    height: 40px;
+    min-height: 40px;
+    background-color: #A2B5BB;
+    padding: 2px;
+    text-align: center;
 }
 
 footer {
@@ -73,8 +76,8 @@ footer {
 }
 
 #user-img {
-    width: 400px;
-    height: 350px;
+    width: 50%;
+    height: 40%;
 }
 
 .computer {
@@ -86,8 +89,8 @@ footer {
 }
 
 #comp-img {
-    width: 400px;
-    height: 350px;
+    width: 50%;
+    height: 40%;
 }
 
 #message {

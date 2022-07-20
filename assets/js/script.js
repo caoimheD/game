@@ -154,7 +154,7 @@ function changeImg() {
   if (playerChoice === 'rock') {
     userImg.src="assets/images/rockimg2.jpg";
   } else if (playerChoice === 'scissors') {
-    userImg.src="assets/images/scissorsimg2.jpg";
+    userImg.src="assets/images/scissors3.jpg";
   } else if (playerChoice === 'paper') {
     userImg.src="assets/images/paper2.jpg";
   } 
