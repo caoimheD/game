@@ -152,19 +152,19 @@ function changeImg() {
   let compImg = document.getElementById("comp-img");
 
   if (playerChoice === 'rock') {
-    userImg.src="assets/images/rock.jpg";
+    userImg.src="assets/images/rockimg2.jpg";
   } else if (playerChoice === 'scissors') {
-    userImg.src="assets/images/scissors.jpg";
+    userImg.src="assets/images/scissorsimg2.jpg";
   } else if (playerChoice === 'paper') {
-    userImg.src="assets/images/paper.jpg";
+    userImg.src="assets/images/paper2.jpg";
   } 
 
   if (computerChoice === 'rock') {
-    compImg.src="assets/images/rock.jpg";
+    compImg.src="assets/images/rockimg2.jpg";
   } else if (computerChoice === 'scissors') {
-    compImg.src="assets/images/scissors.jpg";
+    compImg.src="assets/images/scissorsimg2.jpg";
   } else if (computerChoice === 'paper') {
-    compImg.src="assets/images/paper.jpg";
+    compImg.src="assets/images/paper2.jpg";
   } 
 
 }
