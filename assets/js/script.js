@@ -11,6 +11,8 @@ const compScoreText = document.getElementById("comp-score");
 let playerScore = 0;
 let computerScore = 0;
 let reset = document.getElementById("reset");
+let userImg = document.getElementById("user-img");
+let compImg = document.getElementById("comp-img");
 let playerChoice;
 let computerChoice;
 let result;
@@ -132,6 +134,8 @@ function gameReset() {
       resultText.innerHTML = result;
       compChoiceText.innerHTML = computerChoice;
       userChoiceText.innerHTML = playerChoice;
+      userImg.src = "assets/images/rps.jpg";
+      compImg.src = "assets/images/rps.jpg";
 
 }
 
@@ -155,8 +159,7 @@ function gameRound() {
  */
 
 function changeImg() {
-  let userImg = document.getElementById("user-img");
-  let compImg = document.getElementById("comp-img");
+  
 
   if (playerChoice === 'rock') {
     userImg.src="assets/images/rockanimated.jpg";
