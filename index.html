@@ -25,24 +25,25 @@
         <button id="rock" data-choice="0" class="choicebtn">Rock</button>
         <button id="paper" data-choice="1" class="choicebtn">Paper</button>
         <button id="scissors" data-choice="2" class="choicebtn">Scissors</button>
-    </div>
-    <div id="messages">
-        <p class="scores">Your score: <span id = "user-score">0</span></p>
-        <p class="scores">Computer score: <span id = "comp-score">0</span></p>
-        <p>Result:<span id="result"></span></p>
         <button id="reset" onclick="gameReset()">Reset</button>
     </div>
+    <div id="messages">
+        <p class="userscores">Your score: <span id = "user-score">0</span></p>
+        <p class="compscores">Computer score: <span id = "comp-score">0</span></p>
+        <p>Result:<span id="result"></span></p>
+        
+    </div>
     <div class="user">
-        <p>You chose: 
+        <p>Your choice: 
         <br>
-        <span id = "user-choice"></span></p>
+        <span id = "user-choice">Make a choice!</span></p>
         
         <img id = "user-img" src="assets/images/rps.jpg" alt="">
     </div>
     <div class="computer">
-        <p>Computer chose:
+        <p>Computer choice:
         <br>
-        <span id = "comp-choice"></span></p>
+        <span id = "comp-choice">Make a choice!</span></p>
         
         <img id = "comp-img" src="assets/images/rps.jpg" alt="">
     </div>
@@ -50,9 +51,9 @@
     
     
 </section>
-<div id = "footerarea"></div>
+<div id = "footerarea">
 <footer>Rules: Rock beats scissors, Scissors beats paper, Paper beats rock! First to 5 wins! </footer>
-
+</div>
     <script src="assets/js/script.js"></script>
 </body>
 

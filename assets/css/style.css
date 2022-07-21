@@ -1,3 +1,8 @@
+html {
+    position: relative;
+    min-height: 100%;
+    overflow: scroll;
+}
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
@@ -14,13 +19,19 @@ header {
 
 footer {
     position: absolute;
+    bottom: 0px;
+    left: 0;
     background-color: #A2B5BB;
     width: 100%;
-    height: 45px;
+    min-height: 45px;
     text-align: center;
-    left: 0;
-    bottom: 0;
     font-size: 120%;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+#footerarea {
+    padding-top:30px;
 }
 
 .the-game {
@@ -28,8 +39,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 5px;
     font-size: 140%;
+    position: relative;
 }
 
 .choicebtn {
@@ -48,14 +59,17 @@ footer {
     color: #EB1D36;
 }
 
-.scores {
+.userscores {
     text-align: center;
-    padding: 3px;
+    height: 
+}
+.compscores {
+    text-align: center;
 }
 
 #reset {
-    width: 80px;
-    height: 50px;
+    width: 70px;
+    height: 40px;
     margin: 2px;
     background-color: #EB1D36;
     color: #CFD2CF;
@@ -74,6 +88,8 @@ footer {
     width: 45%;
     border: 5px solid;
     border-color: #A2B5BB;
+    padding: 3px;
+    margin-bottom: 50px;
 }
 
 #user-img {
@@ -87,6 +103,8 @@ footer {
     width: 45%;
     border: 5px solid;
     border-color: #A2B5BB;
+    padding: 3px;
+    margin-bottom: 50px;
 }
 
 #comp-img {
@@ -94,8 +112,16 @@ footer {
     height: 40%;
 }
 
-#message {
-    height: 20px;
+#messages {
+    min-height: 20px;
+    width: ;
+    display: ;
+}
+
+#messages > p {
+    display: inline-grid;
+    padding: 5px;
+    margin: 2px;
 }
 
 @media screen and (max-width: 450px) {
