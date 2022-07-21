@@ -54,13 +54,13 @@ function compChoice () {
 
   const randomOption = Math.floor(Math.random() * 3);
 
-   if (randomOption === 1) {
+   if (randomOption === 0) {
     computerChoice = 'rock'
    }
-   if (randomOption === 2) {
+   if (randomOption === 1) {
     computerChoice = 'paper'
    }
-   if (randomOption === 3) {
+   if (randomOption === 2) {
     computerChoice = 'scissors'
    }
    compChoiceText.innerHTML = computerChoice;   
@@ -74,7 +74,7 @@ function compChoice () {
 function checkWinner () {
     if (playerChoice == computerChoice) {
       result = 'its a draw!';
-      score = 'playerAndcomputer'
+      score = 'playerAndcomputer';
 } else if (computerChoice === 'rock' && playerChoice === 'paper') {
   result = 'you won!';
   score = 'player';
@@ -123,13 +123,20 @@ function checkScore(){
 function gameReset() {
       computerScore = 0;
       playerScore = 0;
+      result = "";
+      playerChoice = "";
+      computerChoice = "";
 
       playerScoreText.innerHTML = playerScore;
       compScoreText.innerHTML = computerScore;
+      resultText.innerHTML = result;
+      compChoiceText.innerHTML = computerChoice;
+      userChoiceText.innerHTML = playerChoice;
 
 }
+
 /**
- * Limits the amount of rounds played per game to 5 and then announces a winner of the game
+ * Sets the game rules to first player to '5' wins
  */
 
 function gameRound() {
