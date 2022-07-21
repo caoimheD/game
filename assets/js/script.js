@@ -146,12 +146,14 @@ function gameReset() {
 function gameRound() {
 
   if (playerScore === 5) {
-    alert('You win the game!');
-    gameReset();
+    result = 'you won the round! click reset to play again!';
+    setTimeout(gameReset, 10000);
+    
   } else if (computerScore === 5 ) {
-    alert('You lost the game!');
-    gameReset();
-  }
+    result = 'computer won the round! click reset to play again!';
+    setTimeout(gameReset, 10000);
+}
+resultText.innerHTML = result;
 }
 
 /**
