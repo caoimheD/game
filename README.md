@@ -27,7 +27,23 @@ There are three buttons that the user can use for their choice: rock button, pap
 
 There is a fourth button called 'reset'. The user can press this at anytime during the game and it will reset the scores back to zero, the result to blank, the image to the placeholder image and the 'your choice' text to 'make a choice'.
 
-As the rule of this game is that the first to 5 wins, the reset function is automatically called when either the player or the computer reaches a score of 5. There is a 10 second delay on this
+As the rule of this game is that the first to 5 wins, the reset function is automatically called when either the player or the computer reaches a score of 5. There is a 10 second delay on this to allow the user time to read the scores and see who one the last choice. The message that the user receives in the 'result' section will also prompt them to start a new game by pressing 'reset'.
+
+Scores
+
+The score area provides information on the player score and the computer score. Each time the player wins or draws, their score is increased. This also happens for the computer score. Scores will reset to 0 either when the reset button is pressed or when the round is finished and someone reached the score of 5. 
+
+Result
+
+The result provides information in text format every time a selection is made my the player. The possible options are 'you won', 'you lost' and 'its a draw'. This section will also display the winner of the round (first to 5) in text format, along with a prompt for the user to press reset to start again.
+
+User and computer areas
+
+These areas provide information on the choice that has been made  by both the user and the computer. Before any selection has been made, they contain a placeholder image. After a selection has been made, this image changes to an image that represents the choice (e.g. picture of paper). With this feature, players are able to see both in text and in image format what their choice is and what the computer has chosen.
+
+Footer
+
+The footer area contains the rules of the game. Players can read this to understand what the rules are and how they can win.
 
 
 ------
