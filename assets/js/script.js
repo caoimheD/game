@@ -119,7 +119,7 @@ function checkScore(){
     compScoreText.innerHTML = computerScore;
   }
 /**
- * Reset game
+ * Resets the game (scores, images and text).
  */
 
 function gameReset() {
@@ -138,6 +138,8 @@ function gameReset() {
       compImg.src = "assets/images/rps.jpg";
 
       document.getElementById("rock").disabled = false;
+      document.getElementById("paper").disabled = false;
+      document.getElementById("scissors").disabled = false;
 }
 
 /**
@@ -155,20 +157,22 @@ function gameRound() {
 }
 resultText.innerHTML = result;
 }
+/**
+ * function that ends the game and disables buttons from being clicked
+ */
 
  function gameEnd() {
     setTimeout(gameReset, 10000);
-    // todo , disable buttons
     document.getElementById("rock").disabled = true;
+    document.getElementById("paper").disabled = true;
+    document.getElementById("scissors").disabled = true;
  }
 
 /**
- * Changes the image based on user choice
+ * Changes the image based on user choice and computer choice
  */
 
 function changeImg() {
-  
-
   if (playerChoice === 'rock') {
     userImg.src="assets/images/rockanimated.jpg";
   } else if (playerChoice === 'scissors') {
@@ -184,5 +188,4 @@ function changeImg() {
   } else if (computerChoice === 'paper') {
     compImg.src="assets/images/paperanimated.jpg";
   } 
-
 }
