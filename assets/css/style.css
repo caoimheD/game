@@ -12,7 +12,6 @@ body {
 header {
     text-align: center;
     min-height: 40px;
-    background-color: #A2B5BB;
     padding: 2px;
     text-align: center;
 }
@@ -21,13 +20,14 @@ footer {
     position: absolute;
     bottom: 0px;
     left: 0;
-    background-color: #A2B5BB;
+    background-color:;
     width: 100%;
     min-height: 45px;
     text-align: center;
     font-size: 120%;
     padding-top: 5px;
     box-sizing: border-box;
+    border: solid 1px #EB1D36;
 }
 
 #footerarea {
@@ -52,6 +52,7 @@ footer {
     color: #CFD2CF;
     border-radius: 50%;
     border-color: #EB1D36;
+    font-size: 80%;
 }
 
 .choicebtn:hover {
@@ -119,7 +120,7 @@ footer {
 }
 
 #messages > p {
-    display: inline-grid;
+    
     padding: 5px;
     margin: 2px;
 }
@@ -127,6 +128,10 @@ footer {
 @media screen and (max-width: 450px) {
     .user, .computer {
         font-size: 65%;
+        width: 40%;
+    }
+    .the-game {
+        display: inline;
     }
 
 }
