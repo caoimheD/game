@@ -6,7 +6,7 @@ html {
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
-    background-color: #F5EDDC;
+    background-color: #BDDBD0;
 }
 
 header {
@@ -27,7 +27,7 @@ footer {
     font-size: 120%;
     padding-top: 5px;
     box-sizing: border-box;
-    border: solid 1px #EB1D36;
+    border: solid 1px #AD5D4E;
 }
 
 #footerarea {
@@ -48,16 +48,16 @@ footer {
     width: 90px;
     height: 80px;
     margin: 2px;
-    background-color: #EB1D36;
-    color: #CFD2CF;
+    background-color: #AD5D4E;
+    color: #231B1B;
     border-radius: 50%;
-    border-color: #EB1D36;
+    border-color: #231B1B;
     font-size: 80%;
 }
 
 .choicebtn:hover {
-    background-color: #CFD2CF;
-    color: #EB1D36;
+    background-color: #379634;
+    color: #231B1B;
 }
 
 .userscores {
@@ -72,23 +72,23 @@ footer {
     width: 70px;
     height: 40px;
     margin: 2px;
-    background-color: #EB1D36;
-    color: #CFD2CF;
-    border-color: #A2B5BB;
+    background-color: #AD5D4E;
+    color: #231B1B;
+    border-color: #231B1B;
 }
 
 #reset:hover {
-    background-color: #CFD2CF;
-    color: #EB1D36;
-    border-color: #EB1D36;
+    background-color: #379634;
+    color: #231B1B;
+    border-color: #AD5D4E;
 }
 
 .user {
-    background-color: #CFD2CF;
+    background-color: #F4F1BB;
     float: left;
     width: 45%;
     border: 5px solid;
-    border-color: #A2B5BB;
+    border-color: #AD5D4E;
     padding: 3px;
     margin-bottom: 50px;
 }
@@ -99,11 +99,11 @@ footer {
 }
 
 .computer {
-    background-color: #CFD2CF;
+    background-color: #F4F1BB;
     float: right;
     width: 45%;
     border: 5px solid;
-    border-color: #A2B5BB;
+    border-color: #AD5D4E;
     padding: 3px;
     margin-bottom: 50px;
 }
