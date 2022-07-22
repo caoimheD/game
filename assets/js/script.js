@@ -137,6 +137,7 @@ function gameReset() {
       userImg.src = "assets/images/rps.jpg";
       compImg.src = "assets/images/rps.jpg";
 
+      document.getElementById("rock").disabled = false;
 }
 
 /**
@@ -147,14 +148,19 @@ function gameRound() {
 
   if (playerScore === 5) {
     result = 'you won the round! click reset to play again!';
-    setTimeout(gameReset, 10000);
-    
+    gameEnd(); 
   } else if (computerScore === 5 ) {
     result = 'computer won the round! click reset to play again!';
-    setTimeout(gameReset, 10000);
+    gameEnd();
 }
 resultText.innerHTML = result;
 }
+
+ function gameEnd() {
+    setTimeout(gameReset, 10000);
+    // todo , disable buttons
+    document.getElementById("rock").disabled = true;
+ }
 
 /**
  * Changes the image based on user choice
