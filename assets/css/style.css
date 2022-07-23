@@ -12,9 +12,11 @@ body {
 header {
     text-align: center;
     min-height: 40px;
-    padding: 2px;
     text-align: center;
     color: #379634;
+}
+#gametext {
+    color:#379634;
 }
 
 footer {
@@ -96,7 +98,7 @@ footer {
 
 #user-img {
     width: 50%;
-    height: 40%;
+    height: 30%;
 }
 
 .computer {
@@ -111,7 +113,7 @@ footer {
 
 #comp-img {
     width: 50%;
-    height: 40%;
+    height: 30%;
 }
 
 #messages {

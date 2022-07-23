@@ -137,8 +137,8 @@ function gameReset() {
     resultText.innerHTML = result;
     compChoiceText.innerHTML = computerChoice;
     userChoiceText.innerHTML = playerChoice;
-    userImg.src = "assets/images/rps.jpg";
-    compImg.src = "assets/images/rps.jpg";
+    userImg.src = "assets/images/placeholder.jpg";
+    compImg.src = "assets/images/placeholder.jpg";
 
     rockBtn.disabled = false;
     paperBtn.disabled = false;

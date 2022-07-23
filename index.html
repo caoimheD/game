@@ -17,10 +17,11 @@
 
 <body>
 <header>
-    <h1>Play Rock, Paper, Scissors!</h1>
+    <h1>Rock, Paper, Scissors</h1>
 </header>
 
 <section class="the-game">
+    <h3 id="gametext">Play now!</h3>
     <div>
         <button id="rock" data-choice="0" class="choicebtn">Rock</button>
         <button id="paper" data-choice="1" class="choicebtn">Paper</button>
@@ -31,32 +32,27 @@
     <div id="messages">
         <p class="userscores">Your score: <span id = "user-score">0</span></p>
         <p class="compscores">Computer score: <span id = "comp-score">0</span></p>
-        <p>Result: <span id="result"></span></p>
-        
+        <p>Result: <span id="result"></span></p>   
     </div>
     <div class="user">
         <p>Your choice: 
         <br>
         <span id = "user-choice">Make a choice!</span></p>
-        
-        <img id = "user-img" src="assets/images/rps.jpg" alt="">
+        <img id = "user-img" src="assets/images/placeholder.jpg" alt="game console">
     </div>
     <div class="computer">
         <p>Computer choice:
         <br>
         <span id = "comp-choice">Make a choice!</span></p>
-        
-        <img id = "comp-img" src="assets/images/rps.jpg" alt="">
-    </div>
-    
-
-    
-    
+        <img id = "comp-img" src="assets/images/placeholder.jpg" alt="game console">
+    </div>  
 </section>
 
-<footer>Rules: Rock beats scissors, Scissors beats paper, Paper beats rock! First to 5 wins! </footer>
+<footer>
+Rules: Rock beats scissors, Scissors beats paper, Paper beats rock! First to 5 wins!
+</footer>
 
-    <script src="assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
+
 </body>
-
 </html>
