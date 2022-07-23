@@ -13,6 +13,9 @@ let computerScore = 0;
 let reset = document.getElementById("reset");
 let userImg = document.getElementById("user-img");
 let compImg = document.getElementById("comp-img");
+let rockBtn = document.getElementById("rock");
+let paperBtn = document.getElementById("paper");
+let scissorsBtn = document.getElementById("scissors");
 let playerChoice;
 let computerChoice;
 let result;
@@ -120,6 +123,9 @@ function checkScore(){
   }
 /**
  * Resets the game (scores, images and text).
+ * 
+
+  
  */
 
 function gameReset() {
@@ -137,9 +143,16 @@ function gameReset() {
       userImg.src = "assets/images/rps.jpg";
       compImg.src = "assets/images/rps.jpg";
 
-      document.getElementById("rock").disabled = false;
-      document.getElementById("paper").disabled = false;
-      document.getElementById("scissors").disabled = false;
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
+    scissorsBtn.disabled = false;
+
+    rockBtn.style.background = '#AD5D4E';
+    paperBtn.style.background = '#AD5D4E';
+    scissorsBtn.style.background = '#AD5D4E'; 
+
+      
+      
 }
 
 /**
@@ -163,9 +176,15 @@ resultText.innerHTML = result;
 
  function gameEnd() {
     setTimeout(gameReset, 10000);
-    document.getElementById("rock").disabled = true;
-    document.getElementById("paper").disabled = true;
-    document.getElementById("scissors").disabled = true;
+    
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorsBtn.disabled = true;
+
+    rockBtn.style.background = '#F4F1BB';
+    paperBtn.style.background = '#F4F1BB';
+    scissorsBtn.style.background = '#F4F1BB';
+
  }
 
 /**
