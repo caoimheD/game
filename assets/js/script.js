@@ -146,13 +146,7 @@ function gameReset() {
     rockBtn.disabled = false;
     paperBtn.disabled = false;
     scissorsBtn.disabled = false;
-
-    rockBtn.style.background = '#AD5D4E';
-    paperBtn.style.background = '#AD5D4E';
-    scissorsBtn.style.background = '#AD5D4E'; 
-
-      
-      
+  
 }
 
 /**
@@ -180,11 +174,6 @@ resultText.innerHTML = result;
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
-
-    rockBtn.style.background = '#F4F1BB';
-    paperBtn.style.background = '#F4F1BB';
-    scissorsBtn.style.background = '#F4F1BB';
-
  }
 
 /**
