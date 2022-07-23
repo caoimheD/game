@@ -104,7 +104,7 @@ resultText.innerHTML = result;
 }
 
 /**
- * Scores
+ * Calculates user and computer scores
  */
 
 function checkScore(){
@@ -167,12 +167,9 @@ resultText.innerHTML = result;
 
  function gameEnd() {
     setTimeout(gameReset, 10000);
-    
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
-
-
  }
 
 /**
