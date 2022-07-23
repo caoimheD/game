@@ -123,25 +123,22 @@ function checkScore(){
   }
 /**
  * Resets the game (scores, images and text).
- * 
-
-  
  */
 
 function gameReset() {
-      computerScore = 0;
-      playerScore = 0;
-      result = "";
-      playerChoice = "";
-      computerChoice = "";
+    computerScore = 0;
+    playerScore = 0;
+    result = "";
+    playerChoice = 'Make a choice!';
+    computerChoice = 'Make a choice!';
 
-      playerScoreText.innerHTML = playerScore;
-      compScoreText.innerHTML = computerScore;
-      resultText.innerHTML = result;
-      compChoiceText.innerHTML = computerChoice;
-      userChoiceText.innerHTML = playerChoice;
-      userImg.src = "assets/images/rps.jpg";
-      compImg.src = "assets/images/rps.jpg";
+    playerScoreText.innerHTML = playerScore;
+    compScoreText.innerHTML = computerScore;
+    resultText.innerHTML = result;
+    compChoiceText.innerHTML = computerChoice;
+    userChoiceText.innerHTML = playerChoice;
+    userImg.src = "assets/images/rps.jpg";
+    compImg.src = "assets/images/rps.jpg";
 
     rockBtn.disabled = false;
     paperBtn.disabled = false;
@@ -174,6 +171,8 @@ resultText.innerHTML = result;
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
+
+
  }
 
 /**
