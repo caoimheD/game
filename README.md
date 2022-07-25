@@ -1,6 +1,20 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome!
+# Table of contents
+1. [Welcome](#welcome)
+2. [Features](#features)
+    1. [Header](#header)
+    2. [Buttons](#buttons)
+    3. [Scores](#scores)
+    4. [Result](#result)
+    5. [User and computer areas](#usercomputerareas)
+    6. [Footer](#footer)
+3. [Testing](#testing)
+4. [Deployment](#deployment)
+4. [Content Credits](#credits)
+
+<a name="welcome"></a>
+## Welcome! 
 
 This website is a game of rock, paper and scissors. It is targeted towards any user who wishes to play the game. The design is intuitive, meaning that it should be clear to the user that in order to play they make a selection from one of the 3 buttons (rock, paper or scissors). This is also explianed to the user in the section with shows their choice and the computer's choice; on loading the website, this displays the text 'make a choice'.
 
@@ -8,15 +22,18 @@ The rules of the game are outlined in the footer. These are the traditional rule
 
 
 
-## Features
+<a name="features"></a>
+## Features 
 
-**Header**
+<a name="header"></a>
+### Header 
 
 ![nav](assets/images/header.jpg)
 
 The header provides the name of the game (rock, paper, scissors). This informs the user of the type of game they can expect to see on the page.
 
-**Buttons**
+<a name="buttons"></a>
+### Buttons 
 
 ![nav](assets/images/buttons.jpg)
 
@@ -31,13 +48,15 @@ There is a fourth button called 'reset'. The user can press this at any time dur
 
 As the rule of this game is that the first to 5 wins, the reset function is automatically called when either the player or the computer reaches a score of 5. There is a 10 second delay on this to allow the user time to read the scores and see who one the last choice. The message that the user receives in the 'result' section will also prompt them to start a new game by pressing 'reset'. The buttons become disabled at this point and clicking on them will not produce any effect. This means that the user cannot keep playing until the game has been reset and the buttons become enabled again.
 
-**Scores**
+<a name="scores"></a>
+### Scores 
 
 ![nav](assets/images/scores.jpg)
 
 The score area provides information on the player score and the computer score. Each time the player wins or draws, their score is increased. This also happens for the computer score. Scores will reset to 0 either when the reset button is pressed or when the round is finished and someone reached the score of 5. 
 
-**Result**
+<a name="result"></a>
+### Result 
 
 ![nav](assets/images/result.jpg)
 
@@ -45,14 +64,16 @@ The result provides information in text format every time a selection is made by
 
 ![nav](assets/images/resultgame.jpg)
 
-**User and computer areas**
+<a name="usercomputerareas"></a>
+### User and computer areas 
 
 These areas provide information on the choice that has been made  by both the user and the computer. Before any selection has been made, they contain a placeholder image. After a selection has been made, this image changes to an image that represents the choice (e.g. picture of paper). This image change occurs for both the user section and the computer section. With this feature, players are able to see both in text and in image format what their choice is and what the computer has chosen.
 
 <img src="assets/images/userchoice.jpg" width="400" height="300"/>
 <img src="assets/images/compchoice.jpg" width="400" height="300"/>
 
-**Footer**
+<a name="footer"></a>
+### Footer 
 
 The footer area contains the rules of the game. Players can read this to understand what the rules are and how they can win.
 
@@ -60,7 +81,8 @@ The footer area contains the rules of the game. Players can read this to underst
 
 ------
 
-## Testing
+<a name="testing"></a>
+## Testing 
 
 Feature testing
 
@@ -90,7 +112,8 @@ Other general testing
 
 ------
 
-## Deployment
+<a name="deployment"></a>
+## Deployment 
 
  GitHub pages:
 
@@ -98,7 +121,8 @@ Other general testing
 
 ---
 
-## Content credits
+<a name="credits"></a>
+## Content credits 
 
 
 Images: https://www.iconspng.com/image/36942/rockpaperscissors
