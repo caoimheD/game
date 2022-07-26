@@ -38,23 +38,10 @@ for (let i = 0; i < button.length; i++) {
 };
 
 /**
- * function that runs the game
- * function runGame(e) {
- 
-   playerChoice = e.target.id;
-   userChoiceText.innerHTML = playerChoice;
-    compChoice ();
-    checkWinner();
-
-  }
- *  
- */
-
-
-/**
  * function that determines computer choice
  *  
  */
+
 function compChoice() {
 
   const randomOption = Math.floor(Math.random() * 3);
@@ -66,7 +53,7 @@ function compChoice() {
 }
 
 /**
- * Checks the winner of the game
+ * Checks the winner of the round
  */
 
 function checkWinner() {
@@ -153,6 +140,7 @@ function gameRound() {
   }
   resultText.innerHTML = result;
 }
+
 /**
  * function that ends the game and disables buttons from being clicked
  */

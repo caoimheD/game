@@ -44,16 +44,19 @@ There are three buttons that the user can use for their choice: rock button, pap
 - the winner is checked, also through a javascript function, and this is displayed in text beside 'result'
 - scores are adjusted depending on who won points
 
-There is a fourth button called 'reset'. The user can press this at any time during the game and it will reset the scores back to zero, the result to blank, the image to the placeholder image and the 'your choice' text to 'make a choice'.
+There is a fourth button called 'reset'. The user can press this at any time during the game and it will reset the scores back to zero, the result to blank, the image to the placeholder image and the 'your choice' text to 'make a choice'. This function is called by using the 'onclick' attribute directly in the index.html file.
 
 As the rule of this game is that the first to 5 wins, the reset function is automatically called when either the player or the computer reaches a score of 5. There is a 10 second delay on this to allow the user time to read the scores and see who one the last choice. The message that the user receives in the 'result' section will also prompt them to start a new game by pressing 'reset'. The buttons become disabled at this point and clicking on them will not produce any effect. This means that the user cannot keep playing until the game has been reset and the buttons become enabled again.
 
 <a name="scores"></a>
 ### Scores 
 
+The score area provides information on the player score and the computer score. Each time the player wins or draws, their score is increased. This also happens for the computer score. Scores will reset to 0 either when the reset button is pressed or when the round is finished and someone reached the score of 5. 
+
 ![nav](assets/images/scores.jpg)
 
-The score area provides information on the player score and the computer score. Each time the player wins or draws, their score is increased. This also happens for the computer score. Scores will reset to 0 either when the reset button is pressed or when the round is finished and someone reached the score of 5. 
+This happens through the use of a function called checkScore and a variable called score. In the checkWinner function, the variable score is provided with 3 different inputs based on the outcome of the round (you won, you lost, its a draw). In the checkScore function, an if/else statement increases the player score or the computer score, or both, depending on the content of the 'score' variable. For example, if score variable contains the text 'you lost!', then the computer score will be increased.
+
 
 <a name="result"></a>
 ### Result 
@@ -67,10 +70,12 @@ The result provides information in text format every time a selection is made by
 <a name="usercomputerareas"></a>
 ### User and computer areas 
 
-These areas provide information on the choice that has been made  by both the user and the computer. Before any selection has been made, they contain a placeholder image. After a selection has been made, this image changes to an image that represents the choice (e.g. picture of paper). This image change occurs for both the user section and the computer section. With this feature, players are able to see both in text and in image format what their choice is and what the computer has chosen.
+These areas provide information on the choice that has been made by both the user and the computer. Before any selection has been made, they contain a placeholder image. After a selection has been made, this image changes to an image that represents the choice (e.g. picture of paper). This image change occurs for both the user section and the computer section. With this feature, players are able to see both in text and in image format what their choice is and what the computer has chosen. This is done through the use of functions and if/else statements, for example if the user choice is 'paper', the image src is changed to display that image. If/else statements are also used to change the text, based on the button that is clicked by the user.
 
 <img src="assets/images/userchoice.jpg" width="400" height="300"/>
 <img src="assets/images/compchoice.jpg" width="400" height="300"/>
+
+While the user choice is displayed based on the button the user clicks (through the use of event listeners), the computer choice is calculated by using math.random and an array of choices. Math.random (combined with math.floor) is multiplied by 3, producing a possible result of 0, 1 or 2, which is assigned to a variable. This variable is then used to pull a value from the array list of choices, for example 0 means that 'rock' would be displayed, 1 would dispaly 'paper' and so forth.
 
 <a name="footer"></a>
 ### Footer 
