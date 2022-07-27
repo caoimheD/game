@@ -3,6 +3,7 @@ html {
     min-height: 100%;
     overflow: scroll;
 }
+
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
@@ -15,6 +16,7 @@ header {
     text-align: center;
     color: #379634;
 }
+
 #gametext {
     color:#379634;
 }
@@ -23,7 +25,6 @@ footer {
     position: absolute;
     bottom: 0px;
     left: 0;
-    background-color:;
     width: 100%;
     min-height: 45px;
     text-align: center;
@@ -63,11 +64,7 @@ footer {
     color: #231B1B;
 }
 
-.userscores {
-    text-align: center;
-    height: 
-}
-.compscores {
+.userscores, .compscores {
     text-align: center;
 }
 
@@ -118,12 +115,9 @@ footer {
 
 #messages {
     min-height: 20px;
-    width: ;
-    display: ;
 }
 
 #messages > p {
-    
     padding: 5px;
     margin: 2px;
 }

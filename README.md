@@ -109,6 +109,10 @@ HTML validator testing passed:
 
 ![nav](assets/images/html.jpg)
 
+CSS validator testing passed:
+
+![nav](assets/images/cssv.jpg)
+
 Responsiveness testing
 
 Lighthouse

@@ -7,26 +7,27 @@ const userChoiceText = document.getElementById("user-choice");
 const resultText = document.getElementById("result");
 const playerScoreText = document.getElementById("user-score");
 const compScoreText = document.getElementById("comp-score");
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+const userImg = document.getElementById("user-img");
+const compImg = document.getElementById("comp-img");
 
 let playerScore = 0;
 let computerScore = 0;
-let reset = document.getElementById("reset");
-let userImg = document.getElementById("user-img");
-let compImg = document.getElementById("comp-img");
-let rockBtn = document.getElementById("rock");
-let paperBtn = document.getElementById("paper");
-let scissorsBtn = document.getElementById("scissors");
 let playerChoice;
 let computerChoice;
 let result;
 let score;
+
 /**
- * add event listener to buttons and display user/computer choices in text
+ * add event listener to buttons and run all game functions
  *  
  */
+
 const button = document.getElementsByClassName("choicebtn");
 for (let i = 0; i < button.length; i++) {
-  button[i].addEventListener("click", (e) => {
+  button[i].addEventListener("click", function (e) {
     playerChoice = e.target.id;
     userChoiceText.innerHTML = playerChoice;
     compChoice();
@@ -43,13 +44,33 @@ for (let i = 0; i < button.length; i++) {
  */
 
 function compChoice() {
-
   const randomOption = Math.floor(Math.random() * 3);
   const computerChoices = ['rock', 'paper', 'scissors'];
   computerChoice = computerChoices[randomOption];
 
   compChoiceText.innerHTML = computerChoices[randomOption];
+}
 
+/**
+ * Changes the image based on user choice and computer choice
+ */
+
+ function changeImg() {
+  if (playerChoice === 'rock') {
+    userImg.src = "assets/images/rockanimated.jpg";
+  } else if (playerChoice === 'scissors') {
+    userImg.src = "assets/images/scissorsanimated.jpg";
+  } else if (playerChoice === 'paper') {
+    userImg.src = "assets/images/paperanimated.jpg";
+  }
+
+  if (computerChoice === 'rock') {
+    compImg.src = "assets/images/rockanimated.jpg";
+  } else if (computerChoice === 'scissors') {
+    compImg.src = "assets/images/scissorsanimated.jpg";
+  } else if (computerChoice === 'paper') {
+    compImg.src = "assets/images/paperanimated.jpg";
+  }
 }
 
 /**
@@ -80,7 +101,6 @@ function checkWinner() {
     score = 'computer';
   }
   resultText.innerHTML = result;
-
 }
 
 /**
@@ -88,7 +108,6 @@ function checkWinner() {
  */
 
 function checkScore() {
-
   if (score == 'player') {
     playerScore++;
   } else if (score == 'computer') {
@@ -100,8 +119,38 @@ function checkScore() {
   playerScoreText.innerHTML = playerScore;
   compScoreText.innerHTML = computerScore;
 }
+
 /**
- * Resets the game (scores, images and text).
+ * Sets the game rules to first player to '5' wins
+ */
+
+ function gameRound() {
+  if (playerScore === 5) {
+    result = 'you won the round! click reset to play again!';
+    gameEnd();
+  } else if (computerScore === 5) {
+    result = 'computer won the round! click reset to play again!';
+    gameEnd();
+  } else if (computerScore === 5 && playerScore === 5) {
+    result = 'this game is a draw! click reset to play again!';
+    gameEnd();
+  }
+  resultText.innerHTML = result;
+}
+
+/**
+ * function that ends the game (when a player or computer reaches score of 5) and disables buttons from being clicked
+ */
+
+ function gameEnd() {
+  setTimeout(gameReset, 10000);
+  rockBtn.disabled = true;
+  paperBtn.disabled = true;
+  scissorsBtn.disabled = true;
+}
+
+/**
+ * Resets the game (scores, images and text)
  */
 
 function gameReset() {
@@ -122,54 +171,4 @@ function gameReset() {
   rockBtn.disabled = false;
   paperBtn.disabled = false;
   scissorsBtn.disabled = false;
-
-}
-
-/**
- * Sets the game rules to first player to '5' wins
- */
-
-function gameRound() {
-
-  if (playerScore === 5) {
-    result = 'you won the round! click reset to play again!';
-    gameEnd();
-  } else if (computerScore === 5) {
-    result = 'computer won the round! click reset to play again!';
-    gameEnd();
-  }
-  resultText.innerHTML = result;
-}
-
-/**
- * function that ends the game and disables buttons from being clicked
- */
-
-function gameEnd() {
-  setTimeout(gameReset, 10000);
-  rockBtn.disabled = true;
-  paperBtn.disabled = true;
-  scissorsBtn.disabled = true;
-}
-
-/**
- * Changes the image based on user choice and computer choice
- */
-
-function changeImg() {
-  if (playerChoice === 'rock') {
-    userImg.src = "assets/images/rockanimated.jpg";
-  } else if (playerChoice === 'scissors') {
-    userImg.src = "assets/images/scissorsanimated.jpg";
-  } else if (playerChoice === 'paper') {
-    userImg.src = "assets/images/paperanimated.jpg";
-  }
-
-  if (computerChoice === 'rock') {
-    compImg.src = "assets/images/rockanimated.jpg";
-  } else if (computerChoice === 'scissors') {
-    compImg.src = "assets/images/scissorsanimated.jpg";
-  } else if (computerChoice === 'paper') {
-    compImg.src = "assets/images/paperanimated.jpg";
-  }
 }
