@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /**
  * Define variables
  *  
@@ -35,8 +37,8 @@ for (let i = 0; i < button.length; i++) {
     checkScore();
     gameRound();
     changeImg();
-  })
-};
+  });
+}
 
 /**
  * function that determines computer choice
@@ -126,13 +128,13 @@ function checkScore() {
 
  function gameRound() {
   if (playerScore === 5) {
-    result = 'you won the round! click reset to play again!';
+    result = 'Congratulations! You won the game! To play again, click reset!';
     gameEnd();
   } else if (computerScore === 5) {
-    result = 'computer won the round! click reset to play again!';
+    result = 'Computer won the game! To play again, click reset!';
     gameEnd();
   } else if (computerScore === 5 && playerScore === 5) {
-    result = 'this game is a draw! click reset to play again!';
+    result = 'this game is a draw! To play again, click reset!';
     gameEnd();
   }
   resultText.innerHTML = result;
