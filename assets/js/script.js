@@ -170,6 +170,11 @@ function gameReset() {
   userImg.src = "assets/images/placeholder.jpg";
   compImg.src = "assets/images/placeholder.jpg";
 
+  document.getElementById("userscorearea").innerHTML =
+    "Your score:";
+    document.getElementById("userchoicearea").innerHTML =
+   "Your choice:";
+
   rockBtn.disabled = false;
   paperBtn.disabled = false;
   scissorsBtn.disabled = false;
@@ -180,8 +185,8 @@ function playerName () {
 
   if (playername != null) {
     document.getElementById("userscorearea").innerHTML =
-    pname + "'s score:";
+    playername + "'s score:";
     document.getElementById("userchoicearea").innerHTML =
-    pname + "'s choice:";
+    playername + "'s choice:";
   }
 }
