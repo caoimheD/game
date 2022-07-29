@@ -10,6 +10,8 @@ body {
     background-color: #BDDBD0;
 }
 
+/* introduction area with heading and name button */
+
 header {
     text-align: center;
     min-height: 40px;
@@ -17,9 +19,30 @@ header {
     color: #379634;
 }
 
+#name {
+    width: 90px;
+    height: 80px;
+    margin: 2px;
+    background-color: #379634;
+    color: #231B1B;
+    border-color: #231B1B;
+    border-radius: 50%;
+}
+
+#name:hover {
+    background-color: #AD5D4E;
+}
+
+#namebutton {
+    display: block;
+}
+
 #gametext {
     color:#379634;
+    margin: 15px;
 }
+
+/* footer */
 
 footer {
     position: absolute;
@@ -38,6 +61,8 @@ footer {
     padding-top:30px;
 }
 
+/* game area */
+
 .the-game {
     width: 75%;
     margin-left: auto;
@@ -46,6 +71,8 @@ footer {
     font-size: 140%;
     position: relative;
 }
+
+/* choice buttons */
 
 .choicebtn {
     display: inline-block;
@@ -83,6 +110,8 @@ footer {
     border-color: #AD5D4E;
 }
 
+/* user and computer areas */
+
 .user {
     background-color: #F4F1BB;
     float: left;
@@ -113,6 +142,8 @@ footer {
     height: 30%;
 }
 
+/* area for text */
+
 #messages {
     min-height: 20px;
 }
@@ -122,6 +153,8 @@ footer {
     margin: 2px;
 }
 
+/* media queries */
+
 @media screen and (max-width: 450px) {
     .user, .computer {
         font-size: 65%;
@@ -129,6 +162,10 @@ footer {
     }
     .the-game {
         display: inline;
+    }
+
+    #name {
+        align-content: center;
     }
 
 }

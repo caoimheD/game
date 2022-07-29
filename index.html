@@ -22,12 +22,15 @@
 
 <section class="the-game">
     <h3 id="gametext">Play now!</h3>
+    <span id="namebutton">
+    <button id="name" onclick="playerName()">Enter your name!</button>
+    </span>
+    
     <div>
         <button id="rock" class="choicebtn">Rock</button>
         <button id="paper" class="choicebtn">Paper</button>
         <button id="scissors" class="choicebtn">Scissors</button>
         <button id="reset" onclick="gameReset()">Reset</button>
-        <button id="name" onclick="playerName()">Enter your name!</button>
     </div>
     <div id="messages">
         <p class="userscores"><span id="userscorearea">Your score:</span> <span id = "user-score">0</span></p>
