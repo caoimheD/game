@@ -27,16 +27,19 @@
         <button id="paper" class="choicebtn">Paper</button>
         <button id="scissors" class="choicebtn">Scissors</button>
         <button id="reset" onclick="gameReset()">Reset</button>
+        <button id="name" onclick="playerName()">Enter your name!</button>
     </div>
     <div id="messages">
-        <p class="userscores">Your score: <span id = "user-score">0</span></p>
+        <p class="userscores" id="userscorearea">Your score: <span id = "user-score">0</span></p>
         <p class="compscores">Computer score: <span id = "comp-score">0</span></p>
         <p>Result: <span id="result"></span></p>   
     </div>
     <div class="user">
-        <p>Your choice: 
+        <p>
+        <span id="userchoicearea">Your choice: </span>
         <br>
-        <span id = "user-choice">Make a choice!</span></p>
+        <span id = "user-choice">Make a choice!</span>
+        </p>
         <img id = "user-img" src="assets/images/placeholder.jpg" alt="game console">
     </div>
     <div class="computer">

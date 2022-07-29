@@ -174,3 +174,14 @@ function gameReset() {
   paperBtn.disabled = false;
   scissorsBtn.disabled = false;
 }
+
+function playerName () {
+  let playername = prompt("Please enter your name", "Name");
+
+  if (playername != null) {
+    document.getElementById("userscorearea").innerHTML =
+    pname + "'s score:";
+    document.getElementById("userchoicearea").innerHTML =
+    pname + "'s choice:";
+  }
+}
