@@ -13,16 +13,25 @@
 4. [Deployment](#deployment)
 4. [Content Credits](#credits)
 
+
 <a name="welcome"></a>
-## Welcome! 
+## Welcome!
+<details>
+<summary>Introduction section</summary>
+
+![nav](assets/images/mockup.jpg)
 
 This website is a game of rock, paper and scissors. It is targeted towards any user who wishes to play the game. The design is intuitive, meaning that it is clear to the user that in order to play they must make a selection from one of the 3 buttons (rock, paper or scissors). This is also explianed to the user in the section with shows their choice and the computer's choice; on loading the website, this displays the text 'make a choice'.
 
 The rules of the game are outlined in the footer. These are the traditional rules for a rock, paper, scissors game: rock beats scissors, scissors beats paper, paper beats rock. There is an additional rule in this specific game which is that the first player to reach the score of '5' wins the game. Players can then press 'reset' to start a new game. If they do not press anything, the game will automatically reset after 10 seconds. The buttons are also disabled once a score of 5 is reached, so players cannot continue playing until a new game is started.
 
+</details>
 
 <a name="features"></a>
 ## Features 
+
+<details>
+<summary>Features section</summary>
 
 <a name="header"></a>
 ### Header 
@@ -34,9 +43,18 @@ The header provides the name of the game (rock, paper, scissors). This informs t
 <a name="buttons"></a>
 ### Buttons 
 
+![nav](assets/images/name.jpg)
+
+The first button that the player will see will be the button that they can use to enter their name. The game will work even if they do not use this button, however it makes the experience more personalized. The button contains an onclick attribute in the html file, which calls a function which the button is clicked on. What the player experiences is a pop up box asking for their name. Once they enter a name into the box, the 'your' in 'your score' and 'your choice' text changes to their name.
+
+![nav](assets/images/name2.jpg)
+![nav](assets/images/name3.jpg)
+
+There are three buttons that the user can use to make their choice selection: rock button, paper button and scissors button.
+
 ![nav](assets/images/buttons.jpg)
 
-There are three buttons that the user can use to make their choice selection: rock button, paper button and scissors button. An event listener has been added to these buttons in javascript, which calls a function. This function targets the 'id' of the buttons (rock, paper, scissors), to determine which choice the user has made. The function then calls the other game functions, such as the function to change the image and calculate scores. 
+ An event listener has been added to these buttons in javascript, which calls a function. This function targets the 'id' of the buttons (rock, paper, scissors), to determine which choice the user has made. The function then calls the other game functions, such as the function to change the image and calculate scores. 
 
 After making a selection and clicking a button, the player can expect to see the following changes:
 
@@ -46,9 +64,9 @@ After making a selection and clicking a button, the player can expect to see the
 - the winner is checked, through a javascript function, and this is displayed in text beside 'result'
 - scores are adjusted depending on who won points
 
-There is a fourth button called 'reset'. The user can press this at any time during the game and it will reset the scores back to zero, the result to blank, the image to the placeholder image and the 'your choice' text to 'make a choice'. This function is called by using the 'onclick' attribute directly in the index.html file. The 'onclick' calls a function called gameReset, which changes all of the above points (image, text, scores and result). The event handlers are therefore set up in two different ways; for the choice buttons this is achieved through an event listener and for the result button through the use of onclick.
+There is a fifth button called 'reset'. The user can press this at any time during the game and it will reset the scores back to zero, the result to blank, the image to the placeholder image and the 'your choice' text to 'make a choice'. It will also reset their name, if they have entered a name. This function is called by using the 'onclick' attribute directly in the index.html file. The 'onclick' calls a function called gameReset, which changes all of the above points (image, text, scores and result). The event handlers are therefore set up in two different ways; for the choice buttons this is achieved through an event listener and for the result button and name button through the use of onclick.
 
-As the rule of this game is that the first to 5 wins, the reset function is automatically called when either the player or the computer reaches a score of 5. There is a 10 second delay on this to allow the user time to read the scores and see who one the last choice. The message that the user receives in the 'result' section will also prompt them to start a new game by pressing 'reset'. The buttons become disabled at this point and clicking on them will not produce any effect. This means that the user cannot keep playing until the game has been reset and the buttons become enabled again.
+As the rule of this game is that the first to 5 wins, the reset function is automatically called when either the player or the computer reaches a score of 5. There is a 10 second delay on this to allow the user time to read the scores and see who one the last choice. The message that the user receives in the 'result' section will also prompt them to start a new game by pressing 'reset'. The choice buttons become disabled at this point and clicking on them will not produce any effect. This means that the user cannot keep playing until the game has been reset and the buttons become enabled again.
 
 <a name="scores"></a>
 ### Scores 
@@ -88,6 +106,8 @@ The footer area contains the rules of the game. Players can read this to underst
 
 ![nav](assets/images/footer.jpg)
 
+</details>
+
 ------
 
 <a name="testing"></a>
@@ -100,11 +120,13 @@ Features were tested by clicking on all of the different buttons and and functio
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
 | Enter url of site in browser  | site shows homepage | pass | 
+| Click name button  | a prompt appears asking to enter name | pass | 
+| Click name button and enter name  | user score and choice text changes to their name | pass | 
 | Click on rock/paper/scissors buttons  | player's choice is shown in text  | pass | 
 | Click on rock/paper/scissors buttons  | computer choice is shown in text  | pass | 
 | Click on rock/paper/scissors buttons | image changes depending on user and comp choice | pass |
 | Click on rock/paper/scissors buttons | a winner result is displayed and scores update  | pass |
-| Click on reset button | scores, images, result and choice text reset  | pass |
+| Click on reset button | scores, images, name, result and choice text reset  | pass |
 | Player/computer reaches score of 5  | game resets after 10 seconds  | pass |
 | Player/computer reaches score of 5   | rock/paper/scissors buttons disabled| pass |
 | Player/computer reaches score of 5 | result message displays winner of game | pass |
