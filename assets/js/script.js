@@ -152,7 +152,7 @@ function checkScore() {
 }
 
 /**
- * Resets the game (scores, images and text)
+ * Resets the game (scores, images, text, name)
  */
 
 function gameReset() {
@@ -179,6 +179,10 @@ function gameReset() {
   paperBtn.disabled = false;
   scissorsBtn.disabled = false;
 }
+
+/**
+ * Function that lets players enter their name
+ */
 
 function playerName () {
   let playername = prompt("Please enter your name", "Name");
