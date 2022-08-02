@@ -21,15 +21,15 @@ let playerChoice;
 let computerChoice;
 let result;
 let score;
+let gameResetTimeout;
 
 /**
- * add event listener to buttons and run all game functions
- *  
+ * add event listener to buttons and run all game functions 
  */
 
-const button = document.getElementsByClassName("choicebtn");
-for (let i = 0; i < button.length; i++) {
-  button[i].addEventListener("click", function (e) {
+const choiceButtons = document.getElementsByClassName("choicebtn");
+for (let i = 0; i < choiceButtons.length; i++) {
+  choiceButtons[i].addEventListener("click", function (e) {
     playerChoice = e.target.id;
     userChoiceText.innerHTML = playerChoice;
     compChoice();
@@ -58,20 +58,31 @@ function compChoice() {
  */
 
  function changeImg() {
-  if (playerChoice === 'rock') {
-    userImg.src = "assets/images/rockanimated.jpg";
-  } else if (playerChoice === 'scissors') {
-    userImg.src = "assets/images/scissorsanimated.jpg";
-  } else if (playerChoice === 'paper') {
-    userImg.src = "assets/images/paperanimated.jpg";
+  switch (playerChoice) {
+    case 'rock':
+      userImg.src = "assets/images/rockanimated.jpg";
+      break;
+    case 'scissors':
+      userImg.src = "assets/images/scissorsanimated.jpg";
+      break;
+    case 'paper':
+      userImg.src = "assets/images/paperanimated.jpg";
+      break;
+    default:
+      console.log('unexpected value for player choice');
   }
-
-  if (computerChoice === 'rock') {
-    compImg.src = "assets/images/rockanimated.jpg";
-  } else if (computerChoice === 'scissors') {
-    compImg.src = "assets/images/scissorsanimated.jpg";
-  } else if (computerChoice === 'paper') {
-    compImg.src = "assets/images/paperanimated.jpg";
+  switch (computerChoice) {
+    case 'rock':
+      compImg.src = "assets/images/rockanimated.jpg";
+      break;
+    case 'scissors':
+      compImg.src = "assets/images/scissorsanimated.jpg";
+      break;
+    case 'paper':
+      compImg.src = "assets/images/paperanimated.jpg";
+      break;
+    default:
+      console.log('unexpected value for computer choice');
   }
 }
 
@@ -128,13 +139,13 @@ function checkScore() {
 
  function gameRound() {
   if (playerScore === 5) {
-    result = 'Congratulations! You won the game! To play again, click reset!';
+    result = 'Congratulations, you won the game! To play again, click restart!';
     gameEnd();
   } else if (computerScore === 5) {
-    result = 'Computer won the game! To play again, click reset!';
+    result = 'Computer won the game! To play again, click restart!';
     gameEnd();
   } else if (computerScore === 5 && playerScore === 5) {
-    result = 'this game is a draw! To play again, click reset!';
+    result = 'this game is a draw! To play again, click restart!';
     gameEnd();
   }
   resultText.innerHTML = result;
@@ -145,7 +156,7 @@ function checkScore() {
  */
 
  function gameEnd() {
-  setTimeout(gameReset, 10000);
+  gameResetTimeout = setTimeout(gameReset, 10000);
   rockBtn.disabled = true;
   paperBtn.disabled = true;
   scissorsBtn.disabled = true;
@@ -156,28 +167,25 @@ function checkScore() {
  */
 
 function gameReset() {
-  computerScore = 0;
-  playerScore = 0;
-  result = "";
-  playerChoice = 'Make a choice!';
-  computerChoice = 'Make a choice!';
+    computerScore = 0;
+    playerScore = 0;
+    result = "";
+    playerChoice = 'Make a choice!';
+    computerChoice = 'Make a choice!';
 
-  playerScoreText.innerHTML = playerScore;
-  compScoreText.innerHTML = computerScore;
-  resultText.innerHTML = result;
-  compChoiceText.innerHTML = computerChoice;
-  userChoiceText.innerHTML = playerChoice;
-  userImg.src = "assets/images/placeholder.jpg";
-  compImg.src = "assets/images/placeholder.jpg";
+    playerScoreText.innerHTML = playerScore;
+    compScoreText.innerHTML = computerScore;
+    resultText.innerHTML = result;
+    compChoiceText.innerHTML = computerChoice;
+    userChoiceText.innerHTML = playerChoice;
+    userImg.src = "assets/images/placeholder.jpg";
+    compImg.src = "assets/images/placeholder.jpg";
 
-  document.getElementById("userscorearea").innerHTML =
-    "Your score:";
-    document.getElementById("userchoicearea").innerHTML =
-   "Your choice:";
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
+    scissorsBtn.disabled = false;
 
-  rockBtn.disabled = false;
-  paperBtn.disabled = false;
-  scissorsBtn.disabled = false;
+    clearTimeout(gameResetTimeout);
 }
 
 /**
