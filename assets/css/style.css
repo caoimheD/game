@@ -168,4 +168,8 @@ footer {
         align-content: center;
     }
 
+    .user, .computer {
+        margin-bottom: 110px;
+    }
+
 }
