@@ -24,9 +24,9 @@
 
 ![nav](assets/images/mockup.jpg)
 
-This website is a game of rock, paper and scissors. It is targeted towards any user who wishes to play the game. The design is intuitive, meaning that it is clear to the user that in order to play they must make a selection from one of the 3 buttons (rock, paper or scissors). This is also explianed to the user in the section with shows their choice and the computer's choice; on loading the website, this displays the text 'make a choice'.
+This website is a game of rock, paper and scissors. It is targeted towards any user who wishes to play the game. The design is intuitive, meaning that it is clear to the user that in order to play they must make a selection from one of the 3 buttons (rock, paper or scissors). This is also explained to the user in the section with shows their choice and the computer's choice; on loading the website, this displays the text 'make a choice'.
 
-The rules of the game are outlined in the footer. These are the traditional rules for a rock, paper, scissors game: rock beats scissors, scissors beats paper, paper beats rock. There is an additional rule in this specific game which is that the first player to reach the score of '5' wins the game. Players can then press 'restart' to start a new game. If they do not press anything, the game will automatically reset after 10 seconds. The buttons are also disabled once a score of 5 is reached, so players cannot continue playing until a new game is started.
+The rules of the game are outlined in the footer. These are the traditional rules for a rock, paper, scissors game: rock beats scissors, scissors beats paper, paper beats rock. There is an additional rule in this specific game which is that the first player to reach the score of '5' wins the game. Players can then press 'restart' to start a new game. If they do not press anything, the game will automatically restart after 10 seconds. The buttons are also disabled once a score of 5 is reached, so players cannot continue playing until a new game is started.
 
 <a name="features"></a>
 ## Features 
@@ -68,7 +68,7 @@ The event handlers for all buttons are therefore set up in two different ways; f
 
 As the rule of this game is that the first to 5 wins, the reset function is automatically called when either the player or the computer reaches a score of 5. There is a 10 second delay on this to allow the user time to read the scores and see who one the last choice. The message that the user receives in the 'result' section will also prompt them to start a new game by pressing 'restart'. The choice buttons become disabled at this point and clicking on them will not produce any effect. This means that the user cannot keep playing until the game has been reset and the buttons become enabled again.
 
-Because it is possible for the player to click on restart and start playing again in the 10 second window, a clear timeout option has been added into the gameReset function. This means that the game will not automatically reset after 10 seconds if the player clicks on the restart button.
+Because it is possible for the player to click on restart and start playing again in the 10 second window, a clear timeout option has been added into the gameReset function. This means that the game will not automatically reset after 10 seconds if the player has already clicked on the restart button.
 
 <a name="scores"></a>
 ### Scores 
@@ -104,7 +104,7 @@ The text for the choice is determined from the id of the user choice buttons and
 <a name="footer"></a>
 ### Footer 
 
-The footer area contains the rules of the game. Players can read this to understand what the rules are and how they can win. It also lets the player know that once a game has ended (someone reached score of 5), the game will automatially restart. This avoids confusion if they are reading the screen after the game has ended and everything resets.
+The footer area contains the rules of the game. Players can read this to understand what the rules are and how they can win. It also lets the player know that once a game has ended (someone reached score of 5), the game will automatically restart. This avoids confusion if they are reading the screen after the game has ended and everything resets.
 
 ![nav](assets/images/footer.jpg)
 
@@ -115,7 +115,7 @@ The footer area contains the rules of the game. Players can read this to underst
 <a name="featuretesting"></a>
 ### Feature testing 
 
-Features were tested by clicking on all of the different buttons and and functions of the game, to determine if they perform the tasks that they are supposed to.
+Features were tested by clicking on all of the different buttons and functions of the game, to determine if they perform the tasks that they are supposed to.
 
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
